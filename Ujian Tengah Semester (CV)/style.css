@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+    font-family: 'Poopins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #E5E3C9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container{
+    background: white;
+    margin: 60px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    box-shadow: 0 35px 55px rgba(0,0,0,0.1);
+}
+
+.container .left{
+    position: relative;
+    background: #789395;
+    padding: 40px;
+}
+
+.profile{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.2)
+    padding-bottom: 20px;
+}
+
+.profile .imgBx{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile .imgBx img{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    object-fit: cover;
+}
+
+.profile h2{
+    margin-top: 20px;
+    color: white;
+    font-size: 1.5em;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.4em;
+}
+
+.profile h2 span{
+    font-size: 0.8em;
+    font-weight: 300;
+}
+
+.contact{
+    padding-top: 40px;
+
+}
+
+.title{
+    color: white;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact ul{
+    position: relative;
+}
+
+.contact ul li{
+    position: relative;
+    margin: 10px 0;
+    list-style: none;
+    cursor: pointer;
+}
+
+.contact ul li .icon{
+    width: 30px;
+    color: #E7FBBE;
+    display: inline-block;
+    font-size: 15px;
+}
+
+.contact ul li span{
+    color: white;
+    font-weight: 300;
+
+}
+
+.education li{
+    margin-bottom: 15px;
+    list-style: none;
+}
+
+.education h5{
+    color: #E7FBBE;
+    font-weight: 500;
+}
+
+.education h4{
+    color: white;
+    font-weight: 300;
+}
+
+.education h4: nth-child(2) {
+    color: white;
+    font-weight: 500;
+}
+
+.languages .text{
+    color: white;
+}
+
+.languages ul li{
+    list-style: none;
+}
+
+.languages .percent{
+    background: #081921;
+    width: 100%;
+    height: 6px;
+    position: relative;
+    display: block;
+    margin-top: 5px;
+}
+
+.languages .percent div{
+    background: #FFFDDE;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.container .right{
+    position: relative;
+    background: #94B49F;
+    padding: 40px;
+}
+
+.about{
+    margin-bottom: 50px;
+}
+
+.about: last-child{
+    margin-bottom: 0;
+}
+
+.title2{
+    color: #32502E;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+p{
+    color: black;
+}
+
+.about .box{
+    margin: 20px 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.about .box .year{
+    min-width: 150px;
+}
+
+.about .box .year h5{
+    color: #32502E;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.about .box .text h6{
+    color: black;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.skills .box{
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center; 
+}
+
+.skills .box h4{
+    color: black;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.skills .box .percent{
+    width: 100%;
+    height: 10px;
+    background: black;
+    position: relative;
+}
+
+.skills .box .percent div{
+    background: #32502E;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.hobby ul{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.hobby ul li{
+    margin: 10px 0;
+    color: black;
+    font-weight: 500;
+    list-style: none;
+}
+
+.hobby ul li .fa{
+    width: 20px;
+    color: #32502E;
+    font-size: 18px;
+}
+
+@media (max-width: 1000px){
+    .container{
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .interest ul{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (max-width: 600px){
+    .about .box{
+        flex-direction: column;
+    }
+
+    .about .box .year{
+        min-width: 150px;
+        margin-bottom: 5px;
+    }
+
+    .interest ul{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .skills .box{
+        grid-template-columns: repeat(1,1fr);
+    }
+}

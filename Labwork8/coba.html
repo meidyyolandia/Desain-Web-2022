@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Highlight</title>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<style type="text/css">
+        .highlight.active {
+        	color: red;
+            background-color: yellow;
+            font-weight: 900;
+        }
+    </style>
+
+</head>
+
+<body>
+	<h1>PTIK FKIP UNS</h1>
+	<p>The <span class="highlight">Faculty of Teacher Training and Education</span>, <span class="highlight">Sebelas Maret University</span>, Surakarta is an <span class="highlight">Educational Personnel Education Institution (LPTK)</span> which has 24 study programs in 6 majors. Each study program has its own characteristics in producing <span class="highlight">superior, strong and intelligent educational staff</span>.</p>
+
+	<p>The <span class="highlight">Informatics and Computer Technology Education (PTIK)</span> study program is planned to take shelter in the management of the <span class="highlight">Engineering and Vocational Education (PTK)</span> department. This placement revises our previous statement, where the PTIK study program is under the P.MIPA department. PTIK is a study program that will produce graduates who are <span class="highlight">prioritized to teach in vocational / vocational programs</span>. So, it would be better if PTIK was under the PTK department which oversees vocational progroms such as <span class="highlight">Building Engineering Education</span>, and <span class="highlight">Mechanical Engineering Education</span>. To meet the needs of lecturers in the field of information technology that cannot be met by the PTK department, PTIK will conduct <span class="highlight">resource sharing with the mathematics study program</span>.</p>
+
+	<button>Highlight Paragraf</button>
+
+	 <script>
+        const highlight = document.querySelectorAll('.highlight');
+        $(document).ready(function(){
+            $('button').click(function Highlight(){
+                highlight.forEach( (item) => {
+                    if(item.classList.contains('active')) {
+                        item.classList.remove('active')
+                    } else {
+                        item.classList.add('active')
+                }
+            })
+       })
+    })
+	</script>
+</body>
+</html>
+
+<script type="text/javascript">
+        $(document).ready(function(){
+            $('button').click(function Highlight(){
+                if ($('mark').css("font-weight")){
+                    $('mark').css({'background-color':'#ffff', 'color':'', 'font-weight':''});
+                } else{
+                    $('mark').css({'color': 'red', 'background-color': 'yellow', 'font-weight': '900'});
+                }
+            })
+        })
+    </script>
